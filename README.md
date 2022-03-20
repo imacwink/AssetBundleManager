@@ -29,33 +29,33 @@
 
 ## Usage
 
-* STABManager Initlize.
+* Initlize.
 
 ```c#
 void Start()
 {
-	STABManager.Initlize("http://127.0.0.1"/* real url*/, "http://127.0.0.1"/* real url*/, OnAssetBundleInitFinish, OnAssetBundleProgress);
+    STABManager.Initlize("http://127.0.0.1"/* real url*/, "http://127.0.0.1"/* real url*/, OnAssetBundleInitFinish, OnAssetBundleProgress);
 }
 
 protected void OnAssetBundleInitFinish(bool bOK, string strErrMsg)
 {
-	if (bOK)
-	{
-		Debug.Log("OnAssetBundleInitFinish Succ !!!!");
-	}
-	else
-	{
-		Debug.Log("OnAssetBundleInitFinish Failed : " + strErrMsg);
-	}
+    if (bOK)
+    {
+        Debug.Log("OnAssetBundleInitFinish Succ !!!!");
+    }
+    else
+    {
+        Debug.Log("OnAssetBundleInitFinish Failed : " + strErrMsg);
+    }
 }
 
 protected void OnAssetBundleProgress(STDownLoadProgress downLoadProgress)
 {
-	Debug.Log("OnAssetBundleProgress : " + downLoadProgress.mProgress);
+    Debug.Log("OnAssetBundleProgress : " + downLoadProgress.mProgress);
 }
 ```
 
-* STABManager Use.
+* Call.
 
 ```c#
 STABManager.GetAssetObject(enResType, AssetBundleName);
